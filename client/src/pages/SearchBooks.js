@@ -72,12 +72,9 @@ const SearchBooks = () => {
     }
 
     try {
-      await addBook({
-        variables: { input: { ...bookToSave } }
+        const { data } = await addBook({
+          variables: { input: { ...bookToSave } }
       });
-
-      
-      
       // const response = await saveBook(bookToSave, token);
 
       // if (!response.ok) {
